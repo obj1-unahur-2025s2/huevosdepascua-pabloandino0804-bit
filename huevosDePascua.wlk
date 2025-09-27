@@ -31,7 +31,7 @@ object matrioshka {
     var property decoracion = flor
     method esDeChocolateBlanco() = huevoSuInterior.esDeChocolateBlanco()
     method esDeChocolateAmargo() = true
-    method calorias() = 3000 + huevoSuInterior.calorias() + decoracion.caloriasDecoriacion()
+    method calorias() = 3000 + huevoSuInterior.calorias() + decoracion.caloriasDecoracion()
 }
 
 object flor {

@@ -4,24 +4,24 @@ import caceriaDeHuevos.*
 
 describe "Caceria de huevos" {
   
-  method inicialize() {
+  method initialize() {
     caceria.inicializarJuego()
   }
 
   test "matrioshka es el huevo con mas calorias del juego" {
-    assert.equals(matrioshka.calorias(),caceria.moEncontradoMayorCalorias())
+    assert.equals(matrioshka,caceria.noEncontradoMayorCalorias())
   }
 
   test "test combinado" {
     caceria.encontrarPrimerHuevo(ana)
     assert.equals(3, caceria.cantidadPorEncontrar())
-    assert.equals(2, caceria.huevosFaltantesBlancos())
+    assert.equals(2, caceria.cuantosConChocoBlanco())
     assert.that(caceria.aunNoFueEncontrado(conejo))
-    assert.equals([huevoRepostero,huevoMixto], caceria.huevosFaltantesBlancos())
+    assert.equals([huevoRepostero,huevoMixto],caceria.huevosFaltantesBlancos())
     caceria.encontrarUnHuevoPor(tito, huevoMixto)
     caceria.encontrarLosRestantes(jose)
     assert.that(ana.estaEnfermo())
     assert.that(jose.estaEnfermo())
+    assert.notThat(tito.estaEnfermo())
   }
-
 }

@@ -8,7 +8,7 @@ object caceria {
         flor.petalos(7)
         blisterHuevitos.huevitos(14)
         matrioshka.huevoSuInterior(blisterHuevitos)
-        huevosNoEncontrados.addAll([matrioshka, huevoMixto, conejo, blisterHuevitos])
+        huevosNoEncontrados.addAll([blisterHuevitos, matrioshka, huevoMixto, conejo])
     }
 
     method cantidadPorEncontrar() = huevosNoEncontrados.size()
@@ -33,5 +33,5 @@ object caceria {
 
     method huevosFaltantesBlancos() = huevosNoEncontrados.filter({h => h.esDeChocolateBlanco()})
 
-    method moEncontradoMayorCalorias() = huevosNoEncontrados.max({h => h.calorias()})
+    method noEncontradoMayorCalorias() = huevosNoEncontrados.max({h => h.calorias()})
 }
